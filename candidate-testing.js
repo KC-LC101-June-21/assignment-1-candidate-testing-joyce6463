@@ -39,7 +39,11 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-  let numCorrect = 2;
+  let numCorrect = 0;
+  for(i = 0; i < correctAnswers.length; i++){
+    if(correctAnswers[i] == candidateAnswers[i])
+  numCorrect += 1  
+}
 
   let grade = (numCorrect / questions.length) * 100;
   console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of ${questions.length} correct) <<<`);
@@ -49,6 +53,7 @@ function gradeQuiz(candidateAnswers) {
 } else {
   console.log(`>>> Status: FAILED <<<`);
 }
+
 
   return grade;
 }
