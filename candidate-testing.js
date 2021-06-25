@@ -39,7 +39,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-  let numCorrect = 0;
+  let numCorrect = 2;
 
   let grade = (numCorrect / questions.length) * 100;
   console.log(`>>> Overall Grade: ${grade}% (${numCorrect} of ${questions.length} correct) <<<`);
@@ -60,6 +60,7 @@ function runProgram() {
 
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+
 }
 
 // Don't write any code below this line //
